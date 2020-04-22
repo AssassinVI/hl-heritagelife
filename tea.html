@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <!-- Site Title-->
+    <title>襲園生活</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Libre+Franklin:200,300,500,600,300italic"> -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+  <body>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div id="page-loader">
+      <div class="cssload-container">
+        <div class="cssload-speeding-wheel"></div>
+      </div>
+    </div>
+    <!-- Page-->
+    <div class="page">
+         <div class="page">
+      <!-- Page header-->
+      <header class="page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar_inverse rd-navbar_dark" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-device-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-stick-up-clone="false" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true" data-lg-stick-up-offset="120px" data-xl-stick-up-offset="35px" data-xxl-stick-up-offset="35px" data-body-class="rd-navbar-absolute">
+            <!-- RD Navbar Top Panel-->
+            <div class="rd-navbar-top-panel">
+              <div class="rd-navbar-top-panel__main">
+                <div class="rd-navbar-top-panel__toggle rd-navbar-fixed__element-1 rd-navbar-static--hidden" data-rd-navbar-toggle=".rd-navbar-top-panel__main"><span></span></div>
+                <div class="rd-navbar-top-panel__content">
+                  <div class="rd-navbar-top-panel__left">
+                    <p></p>
+                  </div>
+                  <div class="rd-navbar-top-panel__right">
+                    <ul class="rd-navbar-items-list">
+                      <li>
+                        <ul class="list-inline-xxs">
+                          <li><a href="#" data-toggle="modal" data-target="#modalLogin">Sign In</a></li>
+                          <li><a href="#" data-toggle="modal" data-target="#modalRegister">Create an Account</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <ul class="list-inline-xxs">
+                          <li><a class="icon icon-xxs icon-primary fa fa-facebook" href="#"></a></li>
+                  
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rd-navbar-inner rd-navbar-search-wrap context-dark">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel rd-navbar-search_collapsable">
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand">
+                  <!-- Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-347x65.png" alt="" width="173" height="32"/><img class="brand-logo-light" src="images/logo-inverse-347x65.png" alt="" width="173" height="32"/></a>
+                </div>
+              </div>
+              <!-- RD Navbar Nav-->
+              <div class="rd-navbar-nav-wrap rd-navbar-search_not-collapsable">
+                <ul class="rd-navbar-items-list rd-navbar-search_collapsable">
+                  <li>
+                    <button class="rd-navbar-search__toggle rd-navbar-fixed--hidden" data-rd-navbar-toggle=".rd-navbar-search-wrap"></button>
+                  </li>
+                  <li class="rd-navbar-nav-wrap__shop"><a class="icon icon-md linear-icon-cart link-gray-4" href="cart.html"></a></li>
+                </ul>
+                <!-- RD Search-->
+                <div class="rd-navbar-search rd-navbar-search_toggled rd-navbar-search_not-collapsable">
+                  <form class="rd-search" action="search-results.html" method="GET" data-search-live="rd-search-results-live">
+                    <div class="form-wrap">
+                      <input class="form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
+                      <label class="form-label" for="rd-navbar-search-form-input">Enter keyword</label>
+                      <div class="rd-search-results-live" id="rd-search-results-live"></div>
+                    </div>
+                    <button class="rd-search__submit" type="submit"></button>
+                  </form>
+                  <div class="rd-navbar-fixed--hidden">
+                    <button class="rd-navbar-search__toggle" data-custom-toggle=".rd-navbar-search-wrap" data-custom-toggle-disable-on-blur="true"></button>
+                  </div>
+                </div>
+                <div class="rd-navbar-search_collapsable">
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">關於</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="#">品牌</a>
+                      <ul class="rd-menu rd-navbar-dropdown">
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#.html">回家旅宿</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#.html">襲園茶品</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#.html">古衣帕卜</a>
+                        </li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#.html">線上私廚</a>
+                        </li>
+                      </ul>
+                    </li>
+                     <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">職人故事</a>
+                    </li>
+                     <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">嚴選商品</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Swiper-->
+      <section class="rd-parallax">
+        <div class="rd-parallax-layer" data-type="html" data-speed="1">
+          <div class="swiper-container swiper-slider swiper-slider_fullheight" data-simulate-touch="false" data-loop="true" data-autoplay="5500">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide bg-black" data-slide-bg="images/slider-slide-7-1920x1080.jpg">
+                <div class="swiper-slide-caption text-center" data-speed="0.5" data-fade="true">
+                  <div class="container">
+                    <h1 data-caption-animate="fadeInUpSmall" data-wow-duration="5s"><span>Monstroid </span><sup class="text-accent">2</sup></h1>
+                    <h3 data-caption-animate="fadeInUpSmall" data-caption-delay="200">New HTML Templates Generation</h3>
+                     <div class="group-lg group-middle"><a class="button button-black" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="#section-see-features" data-custom-scroll-to="section-see-features">Take a tour</a><a class="button button-primary" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="//www.templatemonster.com/website-templates/monstroid2.html" target="_blank">Buy template</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide bg-gray-dark" data-slide-bg="images/slider-slide-8-1920x1080.jpg">
+                <div class="swiper-slide-caption text-left" data-speed="0.5" data-fade="true">
+                  <div class="container">
+                    <h2 data-caption-animate="fadeInLeftSmall">The Power of Bootstrap </h2>
+                    <h5 data-caption-animate="fadeInLeftSmall" data-caption-delay="100">Discover it with Monstroid²</h5>
+                    <div class="group-lg group-middle"><a class="button button-primary" data-caption-animate="fadeInLeftSmall" data-caption-delay="200" href="//www.templatemonster.com/website-templates/monstroid2.html" target="_blank">Buy template</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide bg-gray-dark" data-slide-bg="images/slider-slide-9-1920x1080.jpg">
+                <div class="swiper-slide-caption text-center" data-speed="0.5" data-fade="true">
+                  <div class="container">
+                    <h2 data-caption-animate="fadeInUpSmall">Built by geeks & used by humans</h2>
+                    <h5 class="text-width-2 block-centered" data-caption-animate="fadeInUpSmall" data-caption-delay="200">Monstroid² aims to satisfy real needs of real projects. We've got a pack of useful tools for that.</h5>
+                    <div class="group-lg group-middle"><a class="button button-black" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="#section-see-features" data-custom-scroll-to="section-see-features">Take a tour</a><a class="button button-primary" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="//www.templatemonster.com/website-templates/monstroid2.html" target="_blank">Buy template</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Swiper Pagination-->
+            <div class="swiper-pagination"></div>
+            <!-- Swiper Navigation-->
+            <div class="swiper-button-prev linear-icon-chevron-left"></div>
+            <div class="swiper-button-next linear-icon-chevron-right"></div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Presentation-->
+      <section class="section-xl bg-default text-center" id="section-see-features">
+        <div class="container">
+          <div class="row justify-content-lg-center">
+            <div class="col-lg-10 col-xl-8">
+              <h3>slogan</h3>
+              <p>Monstroid² boasts clean and crispy design, bulletproof layout consistency and intuitive navigation. The template was created by top industry leaders in web design and user experience. Improve your audience engagement and loyalty with simple and user friendly tools offered by our template.</p>
+            </div>
+          </div>
+          <div class="row row-50">
+            <div class="col-md-6 col-lg-4">
+              <!-- Blurb circle-->
+              <article class="blurb blurb-circle blurb-circle_centered">
+                <div class="blurb-circle__icon"><span class="icon linear-icon-feather"></span></div>
+                <p class="blurb__title">友善土地</p>
+                <p>Use our Template to customize and update your website within seconds.</p>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <!-- Blurb circle-->
+              <article class="blurb blurb-circle blurb-circle_centered">
+                <div class="blurb-circle__icon"><span class="icon linear-icon-menu3"></span></div>
+                <p class="blurb__title">真味無華</p>
+                <p>Use our Template to customize and update your website within seconds.</p>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <!-- Blurb circle-->
+              <article class="blurb blurb-circle blurb-circle_centered">
+                <div class="blurb-circle__icon"><span class="icon linear-icon-bag2"></span></div>
+                <p class="blurb__title">自然農法</p>
+                <p>Use our Template to customize and update your website within seconds.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Post Your Latest News-->
+      <section class="section-xl bg-default text-center">
+        <div class="container">
+          <div class="row row-50">
+            <div class="col-md-6 col-xl-6">
+              <!-- Post classic-->
+              <article class="post-minimal"><img src="images/post-minimal-1-418x315.jpg" alt="" width="418" height="315"/>
+                <div class="post-classic-title">
+                  <h5><a href="standard-post.html">青埔門市</a></h5>
+                </div>
+                <div class="post-classic-body">
+                  <p>In this article, we would like to share with you why we think Monstroid² is a perfect template for your website and why you should buy it.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-6">
+              <!-- Post classic-->
+              <article class="post-minimal"><img src="images/post-minimal-2-418x315.jpg" alt="" width="418" height="315"/>
+                <div class="post-classic-title">
+                  <h5><a href="standard-post.html">九份門市</a></h5>
+                </div>
+                <div class="post-classic-body">
+                  <p>Every website  requires clean design. It is the  basis of interfaces that are easy to interact with. Let’s discuss pros and cons of such approach.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+       <!-- Divider-->
+      <div class="container">
+        <div class="divider"></div>
+      </div>
+      <!-- Content Driven Design-->
+      <section class="section-xl bg-default">
+        <div class="container">
+          <div class="row justify-content-md-center flex-lg-row-reverse align-items-lg-center justify-content-lg-between row-50">
+            <div class="col-md-9 col-lg-5">
+              <img src="images/home-default-2-652x491.jpg" alt="" width="652" height="491"/>
+            </div>
+            <div class="col-md-9 col-lg-6">
+              <h3>客製化合作</h3>
+              <p>Unlike many other templates, Monstroid² is built around user content but not vice versa. Thus you may be sure when you add your own texts and images the template will look same cool and appealing.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Presentation-->
+      <section class="section-xl bg-default text-center" id="section-see-features">
+        <div class="container">
+          <div class="row justify-content-lg-center">
+            <div class="col-lg-10 col-xl-8">
+              <h3>推薦商品</h3>
+            </div>
+          </div>
+          <div class="row row-50">
+            <div class="col-md-6 col-xl-4">
+              <div class="thumbnail-classic"><img src="images/services-1-418x315.jpg" alt="" width="418" height="315"/>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <div class="thumbnail-classic"><img src="images/services-2-418x315.jpg" alt="" width="418" height="315"/>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <div class="thumbnail-classic"><img src="images/services-3-418x315.jpg" alt="" width="418" height="315"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Divider-->
+      <!-- <div class="container">
+        <div class="divider"></div>
+      </div> -->
+
+      <!-- Brands-->
+      <!-- <section class="section-lg bg-default">
+        <div class="container">
+          <div class="owl-carousel text-center" data-autoplay="true" data-items="1" data-sm-items="2" data-md-items="4" data-lg-items="5" data-xl-items="6" data-stage-padding="15" data-loop="true" data-margin="30" data-mouse-drag="false" data-dots="true">
+            <div class="item"><a class="link-transparent" href="#"><img src="images/brand-1-128x111.png" alt="" width="128" height="111"/></a></div>
+            <div class="item"><a class="link-transparent" href="#"><img src="images/brand-2-129x102.png" alt="" width="129" height="102"/></a></div>
+            <div class="item"><a class="link-transparent" href="#"><img src="images/brand-3-143x110.png" alt="" width="143" height="110"/></a></div>
+            <div class="item"><a class="link-transparent" href="#"><img src="images/brand-4-129x86.png" alt="" width="129" height="86"/></a></div>
+          </div>
+        </div>
+      </section> -->
+
+
+           <!-- Page Footer-->
+      <section class="pre-footer-corporate">
+        <div class="container">
+          <div class="row justify-content-sm-center justify-content-lg-start row-30 row-md-60">
+            <div class="col-sm-10 col-md-6 col-lg-10 col-xl-3">
+              <h6>About</h6>
+              <p>Monstroid² is HTML template that fits both developers and beginners. It comes loaded with an assortment of tools and features that make customization process much easier. A pack of child themes, specially designed for various business niches, allows users to create a fully functional site for any specific business quickly and worry-free.</p>
+            </div>
+            <div class="col-sm-10 col-md-6 col-lg-3 col-xl-3">
+              <h6>Navigation</h6>
+              <ul class="list-xxs">
+                <li><a href="about.html">About</a></li>
+                <li><a href="our-team.html">Our Team</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="event-list.html">Events</a></li>
+                <li><a href="classic-blog.html">Blog</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-10 col-md-6 col-lg-5 col-xl-3">
+              <h6>Recent Comments</h6>
+              <ul class="list-xs">
+                <li>
+                  <!-- Comment minimal-->
+                  <article class="comment-minimal">
+                    <p class="comment-minimal__author">Brian Williamson on</p>
+                    <p class="comment-minimal__link"><a href="standard-post.html">Site Speed and Search Engines Optimization Aspects</a></p>
+                  </article>
+                </li>
+                <li>
+                  <!-- Comment minimal-->
+                  <article class="comment-minimal">
+                    <p class="comment-minimal__author">Brian Williamson on</p>
+                    <p class="comment-minimal__link"><a href="standard-post.html">5 Things to Know Before You Buy an HTML Template</a></p>
+                  </article>
+                </li>
+                <li>
+                  <!-- Comment minimal-->
+                  <article class="comment-minimal">
+                    <p class="comment-minimal__author">Brian Williamson on</p>
+                    <p class="comment-minimal__link"><a href="standard-post.html">Turning Your Site into a Sales Machine</a></p>
+                  </article>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-10 col-md-6 col-lg-4 col-xl-3">
+              <h6>Contacts</h6>
+              <ul class="list-xs">
+                <li>
+                  <dl class="list-terms-minimal">
+                    <dt>Address</dt>
+                    <dd>4578 Marmora Road, Glasgow, D04 89GR</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl class="list-terms-minimal">
+                    <dt>Phones</dt>
+                    <dd>
+                      <ul class="list-semicolon">
+                        <li><a href="tel:#">(800) 123-0045</a></li>
+                        <li><a href="tel:#">(800) 123-0045</a></li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl class="list-terms-minimal">
+                    <dt>E-mail</dt>
+                    <dd><a href="mailto:#">info@demolink.org</a></dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl class="list-terms-minimal">
+                    <dt>We are open</dt>
+                    <dd>Mn-Fr: 10 am-8 pm</dd>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+     <!-- Modal login window-->
+    <div class="modal fade" id="modalLogin" role="dialog">
+      <div class="modal-dialog modal-dialog_custom">
+        <!-- Modal content-->
+        <div class="modal-dialog__inner">
+          <button class="close" type="button" data-dismiss="modal"></button>
+          <div class="modal-dialog__content">
+            <h5>Login Form</h5>
+            <!-- RD Mailform-->
+            <form class="rd-mailform rd-mailform_responsive">
+              <div class="form-wrap form-wrap_icon"><span class="novi-icon form-icon linear-icon-envelope"></span>
+                <input class="form-input" id="modal-login-email" type="email" name="email" data-constraints="@Email @Required">
+                <label class="form-label" for="modal-login-email">Your e-mail</label>
+              </div>
+              <div class="form-wrap form-wrap_icon"><span class="novi-icon form-icon linear-icon-lock"></span>
+                <input class="form-input" id="modal-login-password" type="password" name="password" data-constraints="@Required">
+                <label class="form-label" for="modal-login-password">Your password</label>
+              </div>
+              <button class="button button-primary" type="submit">Login</button>
+            </form>
+            <ul class="list-small">
+              <li><a href="#">Forgot your username?</a></li>
+              <li><a href="#">Forgot your password?</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal register window-->
+    <div class="modal fade" id="modalRegister" role="dialog">
+      <div class="modal-dialog modal-dialog_custom">
+        <!-- Modal content-->
+        <div class="modal-dialog__inner">
+          <button class="close" type="button" data-dismiss="modal"></button>
+          <div class="modal-dialog__content">
+            <h5>Register Form</h5>
+            <!-- RD Mailform-->
+            <form class="rd-mailform rd-mailform_responsive" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+              <div class="form-wrap form-wrap_icon"><span class="novi-icon form-icon linear-icon-envelope"></span>
+                <input class="form-input" id="modal-register-email" type="email" name="email" data-constraints="@Email @Required">
+                <label class="form-label" for="modal-register-email">Your e-mail</label>
+              </div>
+              <div class="form-wrap form-wrap_icon"><span class="novi-icon form-icon linear-icon-lock"></span>
+                <input class="form-input" id="modal-register-password" type="password" name="password" data-constraints="@Required">
+                <label class="form-label" for="modal-register-password">Your password</label>
+              </div>
+              <div class="form-wrap form-wrap_icon"><span class="novi-icon form-icon linear-icon-lock"></span>
+                <input class="form-input" id="modal-register-password2" type="password" name="password2" data-constraints="@Required">
+                <label class="form-label" for="modal-register-password2">Confirm password</label>
+              </div>
+              <div class="form-wrap">
+                <label class="checkbox-inline">
+                  <input type="checkbox" name="remember">Remember me
+                </label>
+              </div>
+              <button class="button button-primary" type="submit">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
