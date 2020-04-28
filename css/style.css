@@ -143,6 +143,14 @@ figure {
 	margin-bottom: 0;
 }
 
+/*footer*/
+.brands_icon{margin-top: 50px;}
+.brands_icon li{display: inline;}
+.brands_icon img{max-width: 24%;}
+.line_share h6{border-right: 2px solid #1371a1;}
+.quote-default__text .info span{color:#1371a1;}
+.brands-center{font-weight: 600;height: 250px;display: flex; border:1px solid #ccc;}
+
 html p a:hover {
 	text-decoration: none;
 }
@@ -224,7 +232,7 @@ h1 a, h1 a:active, h1 a:focus, h2 a, h2 a:active, h2 a:focus, h3 a, h3 a:active,
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, .heading-1 a:hover, .heading-2 a:hover, .heading-3 a:hover, .heading-4 a:hover, .heading-5 a:hover, .heading-6 a:hover {
-	color: #1f957b;
+	color: #00659a;
 }
 
 h1 > *, h2 > *, h3 > *, h4 > *, h5 > *, h6 > *, .heading-1 > *, .heading-2 > *, .heading-3 > *, .heading-4 > *, .heading-5 > *, .heading-6 > * {
@@ -282,7 +290,7 @@ h2,
 @media (min-width: 1200px) {
 	h2,
 	.heading-2 {
-		font-size: 60px;
+		font-size: 48px;
 	}
 }
 
@@ -2504,7 +2512,7 @@ figure img {
 }
 
 .thumbnail-classic {
-	max-width: 420px;
+	max-width: 500px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: left;

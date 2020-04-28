@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <!-- Stylesheets-->
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Libre+Franklin:200,300,500,600,300italic">
+    <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Libre+Franklin:200,300,500,600,300italic"> -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
@@ -23,12 +23,37 @@
     </div>
     <!-- Page-->
     <div class="page">
-      <!-- Page header-->
-      <header class="page-header">
+        <header class="page-header">
         <!-- RD Navbar-->
         <div class="rd-navbar-wrap">
           <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-sm-device-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-device-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-stick-up-clone="false" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true" data-lg-stick-up-offset="69px" data-xl-stick-up-offset="1px" data-xxl-stick-up-offset="1px">
-            
+             <!-- RD Navbar Top Panel-->
+            <div class="rd-navbar-top-panel">
+              <div class="rd-navbar-top-panel__main">
+                <div class="rd-navbar-top-panel__toggle rd-navbar-fixed__element-1 rd-navbar-static--hidden" data-rd-navbar-toggle=".rd-navbar-top-panel__main"><span></span></div>
+                <div class="rd-navbar-top-panel__content">
+                  <div class="rd-navbar-top-panel__left">
+                    <p></p>
+                  </div>
+                  <div class="rd-navbar-top-panel__right">
+                    <ul class="rd-navbar-items-list">
+                      <li>
+                        <ul class="list-inline-xxs">
+                          <li><a href="#" data-toggle="modal" data-target="#modalLogin">登入會員</a></li>
+                          <li><a href="#" data-toggle="modal" data-target="#modalRegister">註冊會員</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <ul class="list-inline-xxs">
+                          <li><a class="icon icon-xxs icon-primary fa fa-facebook" href="#"></a></li>
+                  
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="rd-navbar-inner">
               <!-- RD Navbar Panel-->
               <div class="rd-navbar-panel">
@@ -43,33 +68,70 @@
               <div class="rd-navbar-nav-wrap">
                 
                 <ul class="rd-navbar-nav">
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="food_list.html">食事日常</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="article_list.html">職人嚴選</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="style_list.html">空間美學</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="travel_list.html">襲園行旅</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="brands_list.html">品牌頻道</a> </li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="#">嚴選好物</a></li> 
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">聯絡我們</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="login.html">登入</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">關於我們</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="#">職人手感</a>
+                    <ul class="rd-menu rd-navbar-dropdown">
+                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="article_list.html">職人故事</a></li>
+                    </ul>
+                  </li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="#">食事日常</a>
+                    <ul class="rd-menu rd-navbar-dropdown">
+                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="tea_list.html">茶事典</a></li>
+                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="food_list.html">小食光</a></li>
+                    </ul>
+                  </li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="#">休日案內</a>
+                    <ul class="rd-menu rd-navbar-dropdown">
+                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="travel_list.html">京都行旅</a></li>
+                    </ul>
+                  </li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="#">特別企劃</a>
+                    <ul class="rd-menu rd-navbar-dropdown">
+                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="pump_list.html">古衣與你的日常・慢巡禮</a></li>
+                    </ul>
+                  </li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="store_index.html">嚴選商品</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="#">會員專區</a>
+                    <ul class="rd-menu rd-navbar-dropdown">
+                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="login.html">登入會員</a></li>
+                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="resign.html">註冊會員</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </div>
-              
+               <ul class="rd-navbar-items-list rd-navbar-search_collapsable">
+                  <li class="rd-navbar-nav-wrap__shop"><a class="icon icon-md linear-icon-cart link-gray-4" href="cart_form.html"></a></li>
+                </ul>
                
             </div>
           </nav>
         </div>
       </header>
 
+       <!-- Breadcrumbs-->
+       <section class="breadcrumbs-custom">
+        <div class="container">
+          <div class="breadcrumbs-custom__inner">
+            <p class="breadcrumbs-custom__title">關於我們</p>
+            <ul class="breadcrumbs-custom__path">
+              <li><a href="index.html">首頁</a></li>
+              <li class="active">關於我們</li>
+            </ul>
+          </div>
+        </div>
+      </section>
       <section class="text-center">
         <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="img/pump.jpg">
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="img/story.png">
           <div class="parallax-content">
             <div class="parallax-header__inner">
               <div class="parallax-header__content">
                 <div class="container">
                   <div class="row justify-content-sm-center">
                     <div class="col-md-10 col-xl-8">
-                      <h2>聯絡我們</h2>
+                      <h2>關於我們</h2>
+                      <img class="mt-md-4" src="img/about.png">
+                      <p>About</p>
                     </div>
                   </div>
                 </div>
@@ -79,81 +141,42 @@
         </div>
       </section>
 
-     
-      <section class="section-lg bg-default">
+
+      <!-- Intro-->
+      <section class="section-md bg-default text-center">
         <div class="container">
-          <div class="row row-50">
-            <div class="col-md-5 col-lg-4">
-              <h3>Contact Details</h3>
-              <ul class="list-xs contact-info">
-                <li>
-                  <dl class="list-terms-minimal">
-                    <dt>公司地址</dt>
-                    <dd>320桃園市中壢區青埔九街57號</dd>
-                  </dl>
-                </li>
-                <li>
-                  <dl class="list-terms-minimal">
-                    <dt>Phones</dt>
-                    <dd>
-                      <ul class="list-semicolon">
-                        <li><a href="tel:#">(800) 123-0045</a></li>
-                        <li><a href="tel:#">(800) 123-0045</a></li>
-                      </ul>
-                    </dd>
-                  </dl>
-                </li>
-                <li>
-                  <dl class="list-terms-minimal">
-                    <dt>E-mail</dt>
-                    <dd><a href="mailto:#">info@demolink.org</a></dd>
-                  </dl>
-                </li>
-                
-                <li>
-                  <ul class="list-inline-sm">
-                    <li><a class="icon-sm fa-facebook icon" href="#"></a></li>
-                    <li><a class="icon-sm fa-twitter icon" href="#"></a></li>
-                    <li><a class="icon-sm fa-google-plus icon" href="#"></a></li>
-                    <li><a class="icon-sm fa-vimeo icon" href="#"></a></li>
-                    <li><a class="icon-sm fa-youtube icon" href="#"></a></li>
-                    <li><a class="icon-sm fa-pinterest-p icon" href="#"></a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-7 col-lg-8">
-              <!-- RD Mailform-->
-              <form class="rd-mailform rd-mailform_style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-                <div class="form-wrap form-wrap_icon"><span class="novi-icon form-icon linear-icon-man"></span>
-                  <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
-                  <label class="form-label" for="contact-name">Your name</label>
-                </div>
-                <div class="form-wrap form-wrap_icon"><span class="novi-icon form-icon linear-icon-envelope"></span>
-                  <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required">
-                  <label class="form-label" for="contact-email">Your e-mail</label>
-                </div>
-                <div class="form-wrap form-wrap_icon"><span class="novi-icon form-icon linear-icon-telephone"></span>
-                  <input class="form-input" id="contact-phone" type="text" name="phone" data-constraints="@Numeric">
-                  <label class="form-label" for="contact-phone">Your phone</label>
-                </div>
-                <div class="form-wrap form-wrap_icon"><span class="novi-icon form-icon linear-icon-feather"></span>
-                  <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
-                  <label class="form-label" for="contact-message">Your message</label>
-                </div>
-                <button class="button button-primary" type="submit">send</button>
-              </form>
+          <div class="row row-50 justify-content-lg-center">
+            <div class="col-lg-10 col-xl-8">
+
+              <h5 class="text-medium mt-md-4">生活應用，為你所用。</h6>
+              <p>襲園集團自2004年進入住屋設計領域，始終堅持以設計自宅的心來完成每次住案委託，以尊重自然的態度進行建築與環境的整合，透過襲園美術館傳達「生活美學、情感聯結」的生活藝術觀，以此回應我們所關心、珍惜、重視的這塊土地。</p>
+              <h5 class="text-medium">因為，人與土地惟有共好，兩者才能長久依存、永續發展。</h6>
+              <p>2018年中秋，「襲園生活」正式成立，集聚多年來無數場「一期一會」的生活美學體驗，以資源整合的共好平台模式，與熱愛生活的您分享在這塊土地深耕的職人創作，一種「獨家限量、個人客製，而且友善土地」的生活創作，深入日常生活各個面向。有句禪語「把手共行」是這麼說的，要與發自內心信賴的人攜手共度一生，如此難能可貴的緣分，不僅止於人，某些深化於生命脈絡、富有意涵的事物亦是如此。「襲園生活」挖掘平凡生活中的不尋常，長期追蹤值得人們投入感情、關注的事物，鼎力支持職人持續創作有回憶的「物」，時時刻刻與您分享好事好物好生活，不分晴雨四季，有如家人般陪著您憩在大樹綠蔭下，把手共行走過一段段時光，人與土地的共好長存喜悅成行。</p>
             </div>
           </div>
         </div>
       </section>
-      <!-- Divider-->
-      <div class="container">
-        <div class="divider"></div>
-      </div>
 
-      
-      <!-- Page Footer-->
+
+      <!-- Divider-->
+      <!-- <div class="container">
+        <div class="divider"></div>
+      </div> -->
+
+      <!-- Brands-->
+      <!-- <section class="section-lg bg-default">
+        <div class="container">
+          <div class="owl-carousel text-center" data-autoplay="true" data-items="1" data-sm-items="2" data-md-items="4" data-lg-items="5" data-xl-items="6" data-stage-padding="15" data-loop="true" data-margin="30" data-mouse-drag="false" data-dots="true">
+            <div class="item"><a class="link-transparent" href="#"><img src="images/brand-1-128x111.png" alt="" width="128" height="111"/></a></div>
+            <div class="item"><a class="link-transparent" href="#"><img src="images/brand-2-129x102.png" alt="" width="129" height="102"/></a></div>
+            <div class="item"><a class="link-transparent" href="#"><img src="images/brand-3-143x110.png" alt="" width="143" height="110"/></a></div>
+            <div class="item"><a class="link-transparent" href="#"><img src="images/brand-4-129x86.png" alt="" width="129" height="86"/></a></div>
+          </div>
+        </div>
+      </section> -->
+
+
+           <!-- Page Footer-->
       <section class="pre-footer-corporate">
         <div class="container">
           <div class="row justify-content-sm-center justify-content-lg-start row-30 row-md-60">
@@ -165,38 +188,32 @@
                  「生活美學、情感聯結」的生活藝術觀，以此回應
                  我們所關心、珍惜、重視的這塊土地。</p>
             </div>
-            <div class="col-sm-10 col-md-6 col-lg-3 col-xl-2">
+            <div class="col-sm-10 col-md-6 col-lg-3 col-xl-3">
               <h6 class="text-regular">選單</h6>
-              <div class="row">
-                <div class="col-md-6 col-6">
-                  <ul class="list-xxs">
-                    <li><a href="food_list.html">食事日常</a></li>
-                    <li><a href="article_list.html">職人嚴選</a></li>
-                    <li><a href="style_list.html">空間美學</a></li>
-                    <li><a href="travel_list.html">襲園行旅</a></li>
-                  </ul>
-                </div>
-                <div class="col-md-6 col-6">
-                  <ul class="list-xxs">
-                    <li><a href="brands_list.html">品牌頻道</a></li>
-                    <li><a href="#">嚴選好物</a></li>
-                    <li><a href="login.html">登入</a></li>
-                    <li><a href="contacts.html">聯絡我們</a></li>
-                  </ul>
-                </div>
-              </div>
- 
-            </div>
-            <div class="col-sm-10 col-md-6 col-lg-10 col-xl-3">
-              <ul class="brands_icon">
-                <li><img src="img/her.jpg"></li>
-                <li><img src="img/home.jpg"></li>
-                <li><img src="img/top.jpg"></li>
-                <li><img src="img/cloth.jpg"></li>
+              <ul class="list-xxs">
+                <li><a href="about.html">關於我們</a></li>
+              </ul>
+               <ul class="list-xxs">
+                <li><a href="about.html">職人手感</a></li>
+              </ul>
+              <ul class="list-xxs">
+                <li><a href="about.html">時事日常</a></li>
+              </ul>
+              <ul class="list-xxs">
+                <li><a href="about.html">休日案內</a></li>
+              </ul>
+              <ul class="list-xxs">
+                <li><a href="about.html">特別企劃</a></li>
+              </ul>
+              <ul class="list-xxs">
+                <li><a href="about.html">嚴選商品</a></li>
+              </ul>
+              <ul class="list-xxs">
+                <li><a href="about.html">會員專區</a></li>
               </ul>
             </div>
             
-            <div class="col-sm-10 col-md-6 col-lg-4 col-xl-4">
+            <div class="col-sm-10 col-md-6 col-lg-4 col-xl-3">
               <h6 class="text-regular">聯絡我們</h6>
               <ul class="list-xs">
                 <li>
@@ -207,7 +224,7 @@
                 </li>
                 <li>
                   <dl class="list-terms-minimal">
-                    <dt>公司電話</dt>
+                    <dt>公司電話：</dt>
                     <dd>
                       <ul class="list-semicolon">
                         <li><a href="tel:#">03-453-3886</a></li>
@@ -218,7 +235,7 @@
                 </li>
                 <li>
                   <dl class="list-terms-minimal">
-                    <dt>連絡信箱</dt>
+                    <dt>連絡信箱：</dt>
                     <dd><a href="mailto:#">heritagelife.cl@gmail.com</a></dd>
                   </dl>
                 </li>
@@ -228,7 +245,6 @@
           </div>
         </div>
       </section>
-
       <footer class="footer-corporate">
         <div class="container">
           <div class="footer-corporate__inner">
@@ -299,6 +315,7 @@
       </div>
     </div>
   </div>
+
 
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
