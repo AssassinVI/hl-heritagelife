@@ -6,9 +6,9 @@
  class PDO_fun
  {
  	
- 	private $_dbname = 'hlherita_site'; //資料庫名稱
-	private $_user_id = 'hlherita_site'; //使用者ID
-	private $_user_pwd = '1qazXSW@3'; //使用者密碼
+ 	private $_dbname = 'uart_hl-heritagelife'; //資料庫名稱
+	private $_user_id = 'uart_hl-heritage'; //使用者ID
+	private $_user_pwd = 'vl9UYXJmnLRF'; //使用者密碼
 	
 
 	public $pdo_obj; //PDO物件

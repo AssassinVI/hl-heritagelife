@@ -287,7 +287,7 @@ if ($_GET) {
 					</header>
 				</div><!-- /.panel-heading -->
 				<div class="panel-body">
-					<form id="put_form" action="manager-test.php" method="POST" enctype='multipart/form-data' class="form-horizontal">
+					<form id="put_form" action="" method="POST" enctype='multipart/form-data' class="form-horizontal">
 						<div class="form-group">
 							<label class="col-md-2 control-label" for="aTitle">標題</label>
 							<div class="col-md-10">

@@ -28,9 +28,9 @@ require_once 'phpmailer/class.phpmailer.php';
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ PDO連線 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 function pdo_conn() {
-	$dbanme = 'hlherita_site'; //資料庫名稱
-	$user_id = 'hlherita_site'; //使用者ID
-	$user_pwd = '1qazXSW@3'; //使用者密碼
+	$dbanme = 'uart_hl-heritagelife'; //資料庫名稱
+	$user_id = 'uart_hl-heritage'; //使用者ID
+	$user_pwd = 'vl9UYXJmnLRF'; //使用者密碼
 
 	$dsn = "mysql:host=localhost;dbname=" . $dbanme;
 	$db = new PDO($dsn, $user_id, $user_pwd);
@@ -48,13 +48,13 @@ $mail = new PHPMailer();                        // 建立新物件
     $mail->SMTPAuth = true;                         // 設定SMTP需要驗證
 
     $mail->SMTPSecure = "ssl";                      // Gmail的SMTP主機需要使用SSL連線   
-    $mail->Host = "mail.hl-heritagelife.com";                 // Gmail的SMTP主機        
+    $mail->Host = "mail.uart.qrl.tw";                 // Gmail的SMTP主機        
     $mail->Port = 465;                              // Gmail的SMTP主機的port為465      
     $mail->CharSet = "utf-8";                       // 設定郵件編碼   
     $mail->Encoding = "base64";
     $mail->WordWrap = 50;                           // 每50個字元自動斷行
-    $mail->Username = "server@hl-heritagelife.com";     // 設定驗證帳號        
-    $mail->Password = "D0BBjG91ubzO";              // 設定驗證密碼        
+    $mail->Username = "heritagelife@uart.qrl.tw";     // 設定驗證帳號        
+    $mail->Password = "j2oEIog7jDXq";              // 設定驗證密碼        
     $mail->From = $set_mail;                 // 設定寄件者信箱        
     $mail->FromName = $set_name;                 // 設定寄件者姓名        
     $mail->Subject =$Subject ;                   // 設定郵件標題        
