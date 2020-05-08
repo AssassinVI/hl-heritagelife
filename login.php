@@ -2,23 +2,23 @@
 //-- 共用連線 --
 require 'share_area/conn.php';
 
-$mt_id='site2020042915360091';
+// $mt_id=$_GET['mt_id'];
 
-$row_mt=$pdo->select("SELECT * FROM maintable WHERE Tb_index=:Tb_index", ['Tb_index'=>$mt_id], 'one');
+// $row_mt=$pdo->select("SELECT * FROM maintable WHERE Tb_index=:Tb_index", ['Tb_index'=>$mt_id], 'one');
 
 ?>
 <!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
+<html class="wide wow-animation" lang="zh-tw">
   <head>
     <!-- Site Title-->
-    <title><?php echo $row_mt['MT_Name'];?>｜襲園生活</title>
+    <title>襲園生活</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="description" content="<?php echo $company['description'];?>">
     
-    <?php 
+     <?php 
      //-- 公用CSS --
      require 'share_area/css.php'
     
@@ -42,16 +42,17 @@ $row_mt=$pdo->select("SELECT * FROM maintable WHERE Tb_index=:Tb_index", ['Tb_in
       ?>
 
      
+     
       <section class="text-center">
         <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="sys/img/<?php echo $row_mt['aPic'];?>">
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="img/pump.jpg">
           <div class="parallax-content">
             <div class="parallax-header__inner">
               <div class="parallax-header__content">
                 <div class="container">
                   <div class="row justify-content-sm-center">
                     <div class="col-md-10 col-xl-8">
-                      <h2><?php echo $row_mt['MT_Name'];?></h2>
+                      <h2>登入會員</h2>
                     </div>
                   </div>
                 </div>
@@ -61,70 +62,42 @@ $row_mt=$pdo->select("SELECT * FROM maintable WHERE Tb_index=:Tb_index", ['Tb_in
         </div>
       </section>
 
-      <section class="bg-default section-lg">
-        <div class="container">
-          <div class="row row-60">
-          
-          <?php
-          $row_b=$pdo->select("SELECT * FROM appBrand_url WHERE OnLineOrNot=1 ORDER BY OrderBy DESC ,Tb_index DESC");
-           foreach ($row_b as $b) {
-             echo '
-             <div class="col-md-6 col-xl-4">
-              <article class="post-classic post-minimal justify-content-center align-items-center brands-center">
-                 <div>
-                  <img src="sys/img/'.$b['aPic'].'">
-                 </div>
-                  <a class="brand_a" href="'.$b['aUrl'].'">'.$b['aTitle'].'</a>
-              </article>
-             </div>';
-           }
-          ?>
-            
-              
-             
-            
-            
-           
-            
-           
-            
-            
-           
-           
+        <div class="modal-dialog modal-dialog_custom">
+          <!-- Modal content-->
+          <div class="modal-dialog__inner">
+            <div class="modal-dialog__content">
+              <h5>登入會員</h5>
+              <!-- RD Mailform-->
+              <form class="rd-mailform rd-mailform_responsive">
+                <div class="form-wrap form-wrap_icon"><span class="novi-icon form-icon linear-icon-envelope"></span>
+                  <input class="form-input" id="modal-login-email" type="email" name="email" data-constraints="@Email @Required">
+                  <label class="form-label" for="modal-login-email">E-mail(帳號)</label>
+                </div>
+                <div class="form-wrap form-wrap_icon"><span class="novi-icon form-icon linear-icon-lock"></span>
+                  <input class="form-input" id="modal-login-password" type="password" name="password" data-constraints="@Required">
+                  <label class="form-label" for="modal-login-password">密碼</label>
+                </div>
+                <button class="button button-primary" type="submit">FB登入</button>
+                <button class="button button-primary" type="submit">登入</button>
+              </form>
+              <ul class="list-small">
+                <li><a href="#">忘記您的帳號?</a></li>
+                <li><a href="#">忘記您的密碼?</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-      </section>
-      <!-- Divider-->
-      <div class="container">
-        <div class="divider"></div>
-      </div>
-
-      <!-- <section class="section-md text-center">
-        <div class="container">
-          <nav>
-            <ul class="pagination-classic">
-              <li class="active"><span>1</span></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a class="icon linear-icon-arrow-right" href="#"></a></li>
-            </ul>
-          </nav>
-        </div>
-      </section> -->
 
       
-      <?php
+       <?php
         //-- 公用footer --       
         require 'share_area/footer.php';
        
        ?>
 
     </div>
- 
-
-
-   <?php
+    
+    <?php
         //-- 公用彈跳視窗 --       
         require 'share_area/pop_window.php';
        
@@ -135,7 +108,5 @@ $row_mt=$pdo->select("SELECT * FROM maintable WHERE Tb_index=:Tb_index", ['Tb_in
        require 'share_area/js.php';
       
     ?>
-
-
   </body>
 </html>

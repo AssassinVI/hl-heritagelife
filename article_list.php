@@ -16,6 +16,7 @@ $row_mt=$pdo->select("SELECT * FROM maintable WHERE Tb_index=:Tb_index", ['Tb_in
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
+    <meta name="description" content="<?php echo $company['description'];?>">
     
     <?php 
      //-- 公用CSS --
@@ -70,7 +71,8 @@ $row_mt=$pdo->select("SELECT * FROM maintable WHERE Tb_index=:Tb_index", ['Tb_in
                $time=date('Y-m-d', strtotime($art['StartDate']));
                echo '
                <div class="col-md-6 col-xl-4" title="'.$art['aTitle'].'">
-                  <article class="post-classic post-minimal"><img src="sys/img/'.$art['aPic'].'" alt="" width="418" height="315"/>
+                  <article class="post-classic post-minimal">
+                   <a href="'.$url.'"><img src="sys/img/'.$art['aPic'].'" alt="" width="418" height="315"/></a>
                     <div class="post-classic-title">
                       <h5 class="list_title" ><a href="'.$url.'">'.$art['aTitle'].'</a></h5>
                     </div>

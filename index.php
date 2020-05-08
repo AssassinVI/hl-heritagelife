@@ -12,6 +12,7 @@ require 'share_area/conn.php';
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
+    <meta name="description" content="<?php echo $company['description'];?>">
     
     <?php 
      //-- 公用CSS --
@@ -28,8 +29,8 @@ require 'share_area/conn.php';
       </div>
     </div>
     <!-- Page-->
-    <div class="page">
-         <div class="page">
+    <div class="page ">
+         <div class="page pt-0">
       
       <?php
        //-- 公用header --
@@ -88,7 +89,8 @@ require 'share_area/conn.php';
             foreach ($row_life as $life) {
               echo '
               <div class="col-md-6 col-xl-6">
-              <div class="thumbnail-classic"><img src="sys/img/'.$life['aPic'].'" alt="" width="100%" height="315"/>
+              <div class="thumbnail-classic">
+                <a class="thumbnail-classic-title" href="'.$life['aUrl'].'"><img src="sys/img/'.$life['aPic'].'" alt="" width="100%" height="315"/></a>
                 <div class="caption">
                   <h5><a class="thumbnail-classic-title" href="'.$life['aUrl'].'">'.$life['aTitle'].'</a></h5>
                   <p>'.$life['aAbstract'].'</p>

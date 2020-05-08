@@ -89,6 +89,7 @@
       <th>名稱</th>
       <th>排序</th>
       <th>使用模組</th>
+      <th>狀態</th>
       <th>管理</th>
     </tr>
   </thead>
@@ -100,6 +101,7 @@
   $sql->execute(array(':weblang'=>$weblang));
 
   while ($row=$sql->fetch(PDO::FETCH_ASSOC)) {
+
    
    /* -------------- 第一層 --------------- */
     if (empty($row['parent_id'])) {
@@ -146,6 +148,7 @@
 /* ====================== 單元HTML ====================== */
   function unit_txt($row, $weblang)
   {
+    $OnLineOrNot=$row['OnLineOrNot']==0 ? '關閉':'';
   	if (!empty($row['parent_id'])) {
        $txt='<tr data-tt-id="'.$row['Tb_index'].'" data-tt-parent-id="'.$row['parent_id'].'" style="background-color: #FAFAFA">';
        $txt.='<td class="parent_td">
@@ -166,6 +169,7 @@
          $mode=pdo_select("SELECT Mod_name FROM sysModule WHERE Tb_index=:Tb_index", $where);
 
            $txt.= '<td>'.$mode['Mod_name'].'</td>';
+           $txt.= '<td>'.$OnLineOrNot.'</td>';
            $txt.= '<td align="right">
                      <a href="manager_data.php?Tb_index='.$row['Tb_index'].'&parent_id='.$row['parent_id'].'&weblang='.$weblang.'" class="btn btn-white btn-sm">
                         <i class="fa fa-pencil-square-o "></i> 修改</a> ';
@@ -184,6 +188,7 @@
 /* ====================== 資料夾HTML ====================== */
   function folder_txt($row, $weblang)
   {
+    $OnLineOrNot=$row['OnLineOrNot']==0 ? '關閉':'';
   	if (!empty($row['parent_id'])) {
        $txt='<tr data-tt-id="'.$row['Tb_index'].'" data-tt-parent-id="'.$row['parent_id'].'" style="background-color: #FAFAFA">';
        $txt.='<td class="parent_td">
@@ -198,6 +203,7 @@
   	}
            $txt.= '<td><input type="number" class="sort_in" Tb_index="'.$row['Tb_index'].'" value="'.$row['OrderBy'].'"> </td>';
            $txt.= '<td></td>';
+           $txt.= '<td>'.$OnLineOrNot.'</td>';
 
 
            $txt.= '<td align="right">';

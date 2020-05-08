@@ -99,18 +99,51 @@ $row=$pdo->select("SELECT * FROM appArticle WHERE Tb_index=:Tb_index", ['Tb_inde
                 </p>
                  
               </section>
+
+              <?php
+                $row_prev=$pdo->select("SELECT aTitle, Tb_index 
+                                        FROM appArticle 
+                                        WHERE StartDate>(SELECT StartDate FROM appArticle WHERE Tb_index=:Tb_index) AND mt_id=:mt_id
+                                        ORDER BY StartDate ASC 
+                                        LIMIT 0,1", ['Tb_index'=>$_GET['Tb_index'], 'mt_id'=>$_GET['mt_id']], 'one');
+
+                $row_next=$pdo->select("SELECT aTitle, Tb_index 
+                                        FROM appArticle 
+                                        WHERE StartDate<(SELECT StartDate FROM appArticle WHERE Tb_index=:Tb_index) AND mt_id=:mt_id
+                                        ORDER BY StartDate DESC 
+                                        LIMIT 0,1", ['Tb_index'=>$_GET['Tb_index'], 'mt_id'=>$_GET['mt_id']], 'one');
+              ?>
               <section class="section-md">
                 <div class="row row-60 justify-content-md-between">
-                  <div class="col-md-5 text-md-left"><a class="unit flex-row unit-spacing-md align-items-center" href="#">
+
+                
+                  <div class="col-md-5 text-md-left">
+                  <?php
+                   if(!empty($row_prev['Tb_index'])){
+                  ?>
+                    <a class="unit flex-row unit-spacing-md align-items-center" href="article_detail.php?mt_id=<?php echo $_GET['mt_id'];?>&Tb_index=<?php echo $row_prev['Tb_index'];?>">
                       <div class="unit-left"><span class="icon icon-md linear-icon-arrow-left"></span></div>
                       <div class="unit-body">
-                        <p class="small">手作甜點</p>
-                      </div></a></div>
-                  <div class="col-md-5 text-md-right"><a class="unit flex-row unit-spacing-md align-items-center" href="#">
-                      <div class="unit-body">
-                        <p class="small">手作興趣變一生製菓追求</p>
+                        <p class="small"><?php echo $row_prev['aTitle'];?></p>
                       </div>
-                      <div class="unit-right"><span class="icon icon-md linear-icon-arrow-right"></span></div></a></div>
+                    </a>
+                  <?php }?>
+                  </div>
+                
+                
+                  <div class="col-md-5 text-md-right">
+                  <?php
+                   if(!empty($row_next['Tb_index'])){
+                  ?>
+                    <a class="unit flex-row unit-spacing-md align-items-center right" href="article_detail.php?mt_id=<?php echo $_GET['mt_id'];?>&Tb_index=<?php echo $row_next['Tb_index'];?>">
+                      <div class="unit-body">
+                        <p class="small"><?php echo $row_next['aTitle'];?></p><span class="icon icon-md linear-icon-arrow-right"></span>
+                      </div>
+                    </a>
+                  <?php }?>
+                  </div>
+                 
+
                 </div>
               </section>
               
@@ -122,95 +155,30 @@ $row=$pdo->select("SELECT * FROM appArticle WHERE Tb_index=:Tb_index", ['Tb_inde
           </div>
         </div>
       </section>
-      <!-- Page Footer-->
-      <section class="pre-footer-corporate">
-        <div class="container">
-          <div class="row justify-content-sm-center justify-content-lg-start row-30 row-md-60">
-            <div class="col-sm-10 col-md-6 col-lg-10 col-xl-3">
-              <h6 class="text-regular">關於</h6>
-              <p>襲園集團自2004年進入住屋設計領域，始終堅持以
-                 設計自宅的心來完成每次住案委託，以尊重自然的
-                 態度進行建築與環境的整合，透過襲園美術館傳達
-                 「生活美學、情感聯結」的生活藝術觀，以此回應
-                 我們所關心、珍惜、重視的這塊土地。</p>
-            </div>
-            <div class="col-sm-10 col-md-6 col-lg-3 col-xl-2">
-              <h6 class="text-regular">選單</h6>
-              <div class="row">
-                <div class="col-md-6 col-6">
-                  <ul class="list-xxs">
-                    <li><a href="food_list.html">食事日常</a></li>
-                    <li><a href="article_list.html">職人嚴選</a></li>
-                    <li><a href="style_list.html">空間美學</a></li>
-                    <li><a href="travel_list.html">襲園行旅</a></li>
-                  </ul>
-                </div>
-                <div class="col-md-6 col-6">
-                  <ul class="list-xxs">
-                    <li><a href="brands_list.html">品牌頻道</a></li>
-                    <li><a href="#">嚴選好物</a></li>
-                    <li><a href="login.html">登入</a></li>
-                    <li><a href="contacts.html">聯絡我們</a></li>
-                  </ul>
-                </div>
-              </div>
- 
-            </div>
-            <div class="col-sm-10 col-md-6 col-lg-10 col-xl-3">
-              <ul class="brands_icon">
-                <li><img src="img/her.jpg"></li>
-                <li><img src="img/home.jpg"></li>
-                <li><img src="img/top.jpg"></li>
-                <li><img src="img/cloth.jpg"></li>
-              </ul>
-            </div>
-            
-            <div class="col-sm-10 col-md-6 col-lg-4 col-xl-4">
-              <h6 class="text-regular">聯絡我們</h6>
-              <ul class="list-xs">
-                <li>
-                  <dl class="list-terms-minimal">
-                    <dt>公司地址</dt>
-                    <dd>320桃園市中壢區青埔九街57號</dd>
-                  </dl>
-                </li>
-                <li>
-                  <dl class="list-terms-minimal">
-                    <dt>公司電話</dt>
-                    <dd>
-                      <ul class="list-semicolon">
-                        <li><a href="tel:#">03-453-3886</a></li>
-                        
-                      </ul>
-                    </dd>
-                  </dl>
-                </li>
-                <li>
-                  <dl class="list-terms-minimal">
-                    <dt>連絡信箱</dt>
-                    <dd><a href="mailto:#">heritagelife.cl@gmail.com</a></dd>
-                  </dl>
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <footer class="footer-corporate">
-        <div class="container">
-          <div class="footer-corporate__inner">
-            <p class="text-center">Ⓒ COPYRIGHT 2018. ALL RIGHT RESERVED.</p>
-          </div>
-        </div>
-      </footer>
+      <?php
+        //-- 公用footer --       
+        require 'share_area/footer.php';
+       
+       ?>
+
+
+
     </div>
-    </div>
-    <!-- Global Mailform Output-->
-    <div class="snackbars" id="form-output-global"></div>
-    <!-- Javascript-->
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
+
+
+    <?php
+        //-- 公用彈跳視窗 --       
+        require 'share_area/pop_window.php';
+       
+    ?>
+
+
+   <?php
+       //-- 公用JS--
+       require 'share_area/js.php';
+      
+    ?>
+
   </body>
 </html>

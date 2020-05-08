@@ -11,18 +11,18 @@
               <div class="row">
                 <div class="col-md-6 col-6">
                   <ul class="list-xxs">
-                    <li><a href="food_list.html">食事日常</a></li>
-                    <li><a href="article_list.html">職人嚴選</a></li>
-                    <li><a href="style_list.html">空間美學</a></li>
-                    <li><a href="travel_list.html">襲園行旅</a></li>
+                    <li><a href="article_list.php?mt_id=site2018110610481744">食事日常</a></li>
+                    <li><a href="article_list.php?mt_id=site2020042914035766">職人嚴選</a></li>
+                    <li><a href="article_list.php?mt_id=site2020042914164188">空間美學</a></li>
+                    <li><a href="article_list.php?mt_id=site2020042914190418">襲園行旅</a></li>
                   </ul>
                 </div>
                 <div class="col-md-6 col-6">
                   <ul class="list-xxs">
-                    <li><a href="brands_list.html">品牌頻道</a></li>
+                    <li><a href="brands_list.php">品牌頻道</a></li>
                     <li><a href="#">嚴選好物</a></li>
-                    <li><a href="login.html">登入</a></li>
-                    <li><a href="contacts.html">聯絡我們</a></li>
+                    <li><a href="contacts.php">聯絡我們</a></li>
+                    <li><a href="login.php">登入</a></li>
                   </ul>
                 </div>
               </div>

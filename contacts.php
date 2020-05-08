@@ -63,6 +63,7 @@ $row_mt=$pdo->select("SELECT * FROM maintable WHERE Tb_index=:Tb_index", ['Tb_in
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
+    <meta name="description" content="<?php echo $company['description'];?>">
     
 
     <?php 
@@ -85,7 +86,7 @@ $row_mt=$pdo->select("SELECT * FROM maintable WHERE Tb_index=:Tb_index", ['Tb_in
 
       <?php
        //-- 公用header --
-       require 'share_area/header_d.php';
+       require 'share_area/header.php';
       
       ?>
 

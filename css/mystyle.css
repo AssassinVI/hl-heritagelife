@@ -8,3 +8,8 @@ html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
                         background-color: rgba(255, 255, 255, 0.9);}
 
 .brands-center .brand_a:hover{opacity: 1; transform: scale(1.2);}
+
+
+.unit-spacing-md.unit.right{ justify-content: flex-end;}
+.unit-spacing-md.unit.right .unit-body{ display: flex;  align-items: center;}
+.unit-spacing-md.unit.right .unit-body .icon-md{margin: 0;  margin-left: 15px;}

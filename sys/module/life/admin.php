@@ -31,7 +31,7 @@ if ($_GET) {
    }
    
    $pdo=pdo_conn();
-   $sql=$pdo->prepare("SELECT Tb_index, aTitle, StartDate, OrderBy, OnLineOrNot, aPic FROM appLife WHERE mt_id=:mt_id ORDER BY OrderBy DESC, StartDate DESC, Tb_index DESC");
+   $sql=$pdo->prepare("SELECT Tb_index, aTitle, StartDate, OrderBy, OnLineOrNot, aPic, aUrl FROM appLife WHERE mt_id=:mt_id ORDER BY OrderBy DESC, StartDate DESC, Tb_index DESC");
    $sql->execute( ["mt_id"=>$_GET['MT_id']] );
 }
 
@@ -84,7 +84,7 @@ if ($_GET) {
 								<td><?php echo $row['aTitle'] ?></td>
 								<td><input type="number" class="sort_in" name="OrderBy" Tb_index="<?php echo $row['Tb_index'];?>" value="<?php echo $row['OrderBy'] ?>"></td>
 								<td><?php echo date('Y-m-d H:i' , strtotime($row['StartDate']))?></td>
-								<td><a href="<?php echo $row['aUrl'];?>" target="_blank">預覽網頁</a></td>
+								<td><a href="/<?php echo $row['aUrl'];?>" target="_blank">預覽網頁</a></td>
 								<td><?php echo $online= $row['OnLineOrNot']==1 ? '上線' : '已下線';?></td>
 								
 

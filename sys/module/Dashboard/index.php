@@ -53,7 +53,6 @@ if ($_GET) {
                         <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
-                                  <th>#</th>  
                                   <th>編號</th>  
                                   <th>E-mail</th> 
                                   <th>姓名</th>  
@@ -62,12 +61,11 @@ if ($_GET) {
                                 <tbody>
                                 <?php 
                                   $pdo=pdo_conn();
-                                  $sql=$pdo->prepare("SELECT * FROM appContacts WHERE webLang=:webLang AND process='0' ORDER BY StartDate DESC LIMIT 0,5");
-                                  $sql->execute(array(":webLang"=>$weblang));
+                                  $sql=$pdo->prepare("SELECT * FROM appContacts WHERE  process='0' ORDER BY StartDate DESC LIMIT 0,5");
+                                  $sql->execute();
                                 ?>
                                     <?php $i=1; while ($row=$sql->fetch(PDO::FETCH_ASSOC)) {?>
                                     <tr>
-                                        <td><?php echo $i?></td>
                                         
                                         <td nowrap><a href="../msg/manager.php?MT_id=<?php echo $row['mt_id'];?>&Tb_index=<?php echo $row['Tb_index'];?>"><?php echo $row['Tb_index']?></a> </td>
                                         <td><a href="mailto:<?php echo $row['UserMail']?>"><?php echo $row['UserMail']?></a></td>
