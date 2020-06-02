@@ -45,7 +45,7 @@ if ($_POST) {
 
    send_Mail('襲園生活系統', 'heritagelife@uart.qrl.tw', '襲園生活365-聯絡我們', $body_data, $name_data, $adds_data);
 
-   location_up('contacts.php','感謝您的來信');
+   location_up('contacts.php','感謝您的來信， 我們將盡快回覆您');
 
 }
 
@@ -142,9 +142,7 @@ $row_mt=$pdo->select("SELECT * FROM maintable WHERE Tb_index=:Tb_index", ['Tb_in
                 <li>
                   <ul class="list-inline-sm">
                     <li><a class="icon-sm fa-facebook icon" href="#"></a></li>
-                    <li><a class="icon-sm fa-twitter icon" href="#"></a></li>
-                    <li><a class="icon-sm fa-vimeo icon" href="#"></a></li>
-                    <li><a class="icon-sm fa-pinterest-p icon" href="#"></a></li>
+
                   </ul>
                 </li>
               </ul>

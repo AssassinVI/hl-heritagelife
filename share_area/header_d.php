@@ -9,7 +9,7 @@
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                 <!-- RD Navbar Brand-->
                 <div class="rd-navbar-brand">
-                  <!-- Brand--><a class="brand" href="index.php"><img class="brand-logo-dark" src="img/logo_1.png" alt="" width="50" height="32"/><img class="brand-logo-light" src="img/logo_1.png" alt="" width="50" height="32"/></a>
+                  <!-- Brand--><a class="brand" href="index.php"><img class="brand-logo-dark" src="img/logo_new2.png" alt="" /><img class="brand-logo-light" src="img/logo_new2.png" alt="" /></a>
                 </div>
               </div>
 
@@ -25,7 +25,7 @@
                   <li class="rd-nav-item"><a class="rd-nav-link" href="brands_list.php">品牌頻道</a> </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="#">嚴選好物</a></li> 
                   <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.php">聯絡我們</a></li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="login.php">登入</a></li>
+                  <!-- <li class="rd-nav-item"><a class="rd-nav-link" href="login.php">登入</a></li> -->
                 </ul>
               </div>
 

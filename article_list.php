@@ -61,8 +61,14 @@ $row_mt=$pdo->select("SELECT * FROM maintable WHERE Tb_index=:Tb_index", ['Tb_in
         </div>
       </section>
 
-      <section class="bg-default section-lg">
+      <section class="bg-default section-md">
+        
         <div class="container">
+          <div class=" text-center pb-5">
+            <div class="title_div">
+              <h2><?php echo $row_mt['MT_Name'];?></h2>
+            </div>
+          </div>
           <div class="row row-60">
            <?php
              $row_art=$pdo->select("SELECT * FROM appArticle WHERE mt_id=:mt_id AND OnLineOrNot=1 ORDER BY OrderBy DESC, StartDate DESC", ['mt_id'=>$mt_id]);
@@ -72,7 +78,7 @@ $row_mt=$pdo->select("SELECT * FROM maintable WHERE Tb_index=:Tb_index", ['Tb_in
                echo '
                <div class="col-md-6 col-xl-4" title="'.$art['aTitle'].'">
                   <article class="post-classic post-minimal">
-                   <a href="'.$url.'"><img src="sys/img/'.$art['aPic'].'" alt="" width="418" height="315"/></a>
+                   <a class="img_a" href="'.$url.'"><img src="sys/img/'.$art['aPic'].'" alt="" width="418" height="315"/></a>
                     <div class="post-classic-title">
                       <h5 class="list_title" ><a href="'.$url.'">'.$art['aTitle'].'</a></h5>
                     </div>
@@ -131,5 +137,15 @@ $row_mt=$pdo->select("SELECT * FROM maintable WHERE Tb_index=:Tb_index", ['Tb_in
        require 'share_area/js.php';
       
     ?>
+    <script>
+      $(document).ready(function () {
+        $('.post-minimal').mouseenter(function () { 
+           $(this).find('.img_a').addClass('active');
+        });
+        $('.post-minimal').mouseleave(function () { 
+           $(this).find('.img_a').removeClass('active');
+        });
+      });
+    </script>
   </body>
 </html>

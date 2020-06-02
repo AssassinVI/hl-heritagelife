@@ -79,7 +79,8 @@ if ($_POST) {
 
 	$param=array(  'Tb_index'=>$Tb_index,
 		              'mt_id'=>$_POST['mt_id'],
-		             'aTitle'=>$_POST['aTitle'],
+					 'aTitle'=>$_POST['aTitle'],
+			      'aAbstract'=>$_POST['aAbstract'],
 		               'aPic'=>$aPic,
 		               'aUrl'=>$_POST['aUrl'],
 		          'StartDate'=>date('Y-m-d H:i:s'),
@@ -158,7 +159,8 @@ if ($_POST) {
       $OnLineOrNot=empty($_POST['OnLineOrNot']) ? 0: 1 ;
     
     $param=array(  
-    	             'aTitle'=>$_POST['aTitle'],
+					 'aTitle'=>$_POST['aTitle'],
+				  'aAbstract'=>$_POST['aAbstract'],
 		               'aUrl'=>$_POST['aUrl'],
 		        'OnLineOrNot'=>$OnLineOrNot
 		          );
@@ -193,7 +195,14 @@ if ($_GET) {
 							<div class="col-md-4">
 								<input type="text" class="form-control" id="aTitle" name="aTitle" value="<?php echo $row['aTitle'];?>">
 							</div>
-							
+						</div>
+
+
+						<div class="form-group">
+							<label class="col-md-2 control-label" for="aAbstract">摘要</label>
+							<div class="col-md-10">
+								<input type="text" class="form-control" id="aAbstract" name="aAbstract" value="<?php echo $row['aAbstract'];?>">
+							</div>
 						</div>
 
 						

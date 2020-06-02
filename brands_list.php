@@ -69,28 +69,21 @@ $row_mt=$pdo->select("SELECT * FROM maintable WHERE Tb_index=:Tb_index", ['Tb_in
           $row_b=$pdo->select("SELECT * FROM appBrand_url WHERE OnLineOrNot=1 ORDER BY OrderBy DESC ,Tb_index DESC");
            foreach ($row_b as $b) {
              echo '
-             <div class="col-md-6 col-xl-4">
+             <div class="col-md-6 col-xl-6 brand_div">
               <article class="post-classic post-minimal justify-content-center align-items-center brands-center">
                  <div>
                   <img src="sys/img/'.$b['aPic'].'">
                  </div>
                   <a class="brand_a" href="'.$b['aUrl'].'">'.$b['aTitle'].'</a>
               </article>
+              <article class="">
+                <h3>'.$b['aTitle'].'</h3>
+                <span>'.$b['aAbstract'].'</span>
+              </article>
              </div>';
            }
           ?>
-            
-              
-             
-            
-            
-           
-            
-           
-            
-            
-           
-           
+
           </div>
         </div>
       </section>

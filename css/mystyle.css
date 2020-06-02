@@ -1,3 +1,22 @@
+
+
+.thumbnail-classic{    max-width: 550px;}
+html, body, div, h1,h2,h3,h4,h5,p,span,a,b{font-family: Microsoft JhengHei;  }
+.swiper_a{    width: 100%; height: 100%; display: flex; align-items: center;}
+.desktop .swiper-slider_fullheight{min-height: 80vh;}
+
+.title_div h2{font-size: 40px; letter-spacing: 3px;}
+.title_div span{letter-spacing: 1px;  color: #000;  font-weight: 500;}
+
+.rd-navbar-static.rd-navbar--is-stuck.rd-navbar_dark, .rd-navbar-static.rd-navbar--is-clone.rd-navbar_dark{background-color: #fff;}
+.rd-navbar-static.rd-navbar_dark.rd-navbar--is-stuck .rd-navbar-nav > li > a{color: #000;}
+
+.rd-navbar--is-stuck .context-dark .brand .brand-logo-dark{ display: none;}
+.context-dark .brand .brand-logo-dark{ display: block;}
+.rd-navbar--is-stuck .context-dark .brand .brand-logo-light{ display: block;}
+.context-dark .brand .brand-logo-light{ display: none;}
+
+
 .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} 
 html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
 .list_title{overflow: hidden;  white-space: nowrap;  text-overflow: ellipsis;}
@@ -13,3 +32,74 @@ html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
 .unit-spacing-md.unit.right{ justify-content: flex-end;}
 .unit-spacing-md.unit.right .unit-body{ display: flex;  align-items: center;}
 .unit-spacing-md.unit.right .unit-body .icon-md{margin: 0;  margin-left: 15px;}
+
+.rd-navbar .rd-navbar-nav > li > a{letter-spacing: 0.2em;}
+
+.pre-footer-corporate h6 + *{letter-spacing: 0.1em;}
+
+
+/*-- 首頁 --*/
+.swiper-container.logo_sw{height: auto; width: 800px; min-height: auto;}
+.logo_div{text-align: center;  margin: 80px 0; }
+.logo_div .swiper-slide{ position: relative; display: flex;  justify-content: center;  align-items: center;}
+.logo_div .swiper-slide img{ max-width: initial;}
+.logo_div .swiper-slide .logo_hover{ position: absolute; left: 0; top: 0; opacity: 0; transition: all 0.5s; left: 0; right: 0; top: 0; bottom: 0; margin: auto;}
+.logo_div .swiper-slide .logo_n_hover{ opacity: 0.6; transition: all 0.5s;}
+.logo_div .swiper-slide .logo_hover:hover{opacity: 1; background-color: #fff;}
+.logo_div .swiper-slide .logo_n_hover:hover{opacity: 0;}
+
+.swiper_a .container h1{letter-spacing: 0.2em;}
+.swiper_a .container h3{letter-spacing: 0.2em;}
+
+.thumbnail-classic .caption h5{    letter-spacing: 0.1em;}
+.thumbnail-classic .caption p{    letter-spacing: 0.1em;}
+
+
+
+
+/*-- 列表頁 --*/
+.parallax-content h2{letter-spacing: 0.3em;}
+.parallax-header__inner{min-height: 80vh; display: flex;  align-items: center;}
+.post-minimal .img_a{height: 240px;  overflow: hidden;  display: flex;  justify-content: center;  align-items: center;}
+.post-minimal .img_a img{  width: auto; max-width: inherit;  height: 100%; transition: all 1s;}
+.post-minimal .img_a.active img{transform: scale(1.2);}
+.list_title a{font-size: 18px; letter-spacing: 0.1em;}
+.post-meta .group{     font-size: 12px; font-weight: 500; font-style: normal; letter-spacing: 0.1em;}
+* + .post-classic-title{    margin-top: 10px;}
+html .page .group > *{ margin-bottom: 10px;}
+.post-meta .group a time{color: #00659a;}
+.post-meta .group .meta-author{ color: #7d7d7d;}
+
+/*-- 品牌頻道 --*/
+.brand_div article{width: 70%; margin: auto;}
+.brand_div article:nth-child(1){    border-radius: 50%; margin-bottom: 10px;}
+.brand_div article:nth-child(2) h3{letter-spacing: 5px;  margin-bottom: 10px;}
+.brand_div article:nth-child(2) span{color: #000; font-weight: 500; letter-spacing: 1px;}
+
+
+/*--- 內文 ---*/
+.article_div p{margin: 0; text-align: justify; font-size: 15px; line-height: 32px; letter-spacing: 0.1em; font-weight: 300; color: #000;}
+.d_title{ font-size: 24px;  letter-spacing: 0.1em;}
+.article_div h2 {  font-size: 20px;  letter-spacing: 0.1em;}
+.article_div h3 {  font-size: 18px;  letter-spacing: 0.1em;}
+
+/*-- 聯絡我們 --*/
+.list-terms-minimal *{ font-size: 15px; color: #000; letter-spacing: 0.1em;}
+
+
+@media(min-width:1280px){
+  .container{width: 1180px;}
+
+  .list-tags a {font-size: 14px; font-weight: 500;}
+}
+
+@media(max-width:768px){
+  .title_div h2{ font-size: 25px;}
+
+  .swiper-slider_fullheight{min-height: 35vh;}
+
+  .swiper-container.logo_sw{height: auto; width: 100%; min-height: auto;}
+  /* .logo_div .swiper-slide .logo_hover{ width: 90px;}
+  .logo_div .swiper-slide .logo_n_hover{ width: 90px;} */
+}
+

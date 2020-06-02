@@ -5,6 +5,20 @@
     <script src="js/script.js"></script>
 
     <script>
+    $(document).ready(function () {
+		if($(window).width()<768){
+         var mySwiper = new Swiper ('.swiper-container.logo_sw', {
+           slidesPerView : 1,
+		   autoplay:true
+        });
+		}
+		else{
+         var mySwiper = new Swiper ('.swiper-container.logo_sw', {
+           slidesPerView : 4
+         });
+		}
+		
+	});
 
     // =============================== 檢查input ====================================
     function check_input(id,txt) {

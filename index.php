@@ -48,16 +48,17 @@ require 'share_area/conn.php';
              $row_sl=$pdo->select("SELECT * FROM indexSlideshow WHERE is_use=1 ORDER BY OrderBy DESC");
              foreach ($row_sl as $sl) {
 
-               $url=empty($sl['aUrl']) ? '':'<div class="group-lg group-middle"><a class="button button-primary" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="'.$sl['aUrl'].'" >LINK</a></div>';
+               //$url=empty($sl['aUrl']) ? '':'<div class="group-lg group-middle"><a class="button button-primary" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="'.$sl['aUrl'].'" >LINK</a></div>';
                echo '
                <div class="swiper-slide bg-black" data-slide-bg="sys/img/'.$sl['back_img'].'">
+                <a class="swiper_a" href="'.$sl['aUrl'].'">
                 <div class="swiper-slide-caption text-center" data-speed="0.5" data-fade="true">
                   <div class="container">
                     <h1 data-caption-animate="fadeInUpSmall" data-wow-duration="5s"><span>'.$sl['aTitle'].'</span></h1>
                     <h3 data-caption-animate="fadeInUpSmall" data-caption-delay="200">'.$sl['html_content'].'</h3>
-                    '.$url.'
                   </div>
                 </div>
+                </a>
               </div>';
              }
             ?>
@@ -75,13 +76,14 @@ require 'share_area/conn.php';
 
 
       <!-- Presentation-->
-      <section class="section-xl bg-default text-center" id="section-see-features">
+      <section class="section-md bg-default text-center" id="section-see-features">
         <div class="container">
-          <!-- <div class="row justify-content-lg-center">
-            <div class="col-lg-10 col-xl-8">
-              <h3>(品牌)最新消息</h3>
+          <div class=" justify-content-lg-center pb-5">
+            <div class="title_div">
+              <h2>時令嚴選</h2>
+              <span>深入日常每個小角落</span>
             </div>
-          </div> -->
+          </div>
           <div class="row row-50">
 
           <?php 

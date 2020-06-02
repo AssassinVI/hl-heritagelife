@@ -7,6 +7,10 @@ $mt_id=$_GET['mt_id'];
 //$row_mt=$pdo->select("SELECT * FROM maintable WHERE Tb_index=:Tb_index", ['Tb_index'=>$mt_id], 'one');
 
 $row=$pdo->select("SELECT * FROM appArticle WHERE Tb_index=:Tb_index", ['Tb_index'=>$_GET['Tb_index']], 'one');
+
+$OtherFile=explode(',', substr($row['OtherFile'], 0,-1)   );
+
+$FB_URL='https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 ?>
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="zh-tw">
@@ -18,12 +22,23 @@ $row=$pdo->select("SELECT * FROM appArticle WHERE Tb_index=:Tb_index", ['Tb_inde
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="description" content="<?php echo $row['SmallTitle'];?>">
+
+    <meta property="og:site_name" content="<?php echo $row['aTitle'];?>｜襲園生活" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_TW" />
+    <meta property="og:image" content="<?php echo 'sys/img/'.$OtherFile[0];?>" />
+    <meta property="og:title" content="<?php echo $row['aTitle'];?>｜襲園生活" />
+    <meta property="og:description" content="<?php echo $row['SmallTitle'];?>" />
+    <meta property="og:url" content="<?php echo $FB_URL;?>" />
     
     <?php 
      //-- 公用CSS --
      require 'share_area/css.php'
     
     ?>
+    <style>
+      .desktop .swiper-slider_fullheight{    min-height: 55vh;}
+    </style>
 
   </head>
   <body>
@@ -47,25 +62,16 @@ $row=$pdo->select("SELECT * FROM appArticle WHERE Tb_index=:Tb_index", ['Tb_inde
       <section class="bg-default section-lg">
         <div class="container">
           <div class="row row-60 justify-content-sm-center">
-            <div class="col-lg-12 section-divided__main">
+            <div class="col-lg-8 section-divided__main">
               <section class="section-md post-single-body">
                 <div class="row">
-                  <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><h1 class="font-weight-bold d_title"><?php echo $row['aTitle'];?></h1></div>
-                  <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                    <ul class="list-inline-sm line_share">
-                      <h6>Share</h6>
-                      <li><a class="icon-sm fa-facebook icon" href="#"></a></li>
-                      <li><a class="icon-sm fa-twitter icon" href="#"></a></li>
-                      <li><a class="icon-sm fa-pinterest-p icon" href="#"></a></li>
-                    </ul>
-                  </div>
+                  <div class="col-sm-12"><h1 class="d_title"><?php echo $row['aTitle'];?></h1></div>
+                  
                 </div>
                 
 
                 <!-- Swiper-->
-                <?php
-                 $OtherFile=explode(',', substr($row['OtherFile'], 0,-1)   );
-                ?>
+                
                 <section class="rd-parallax mt-5">
                   <div class="rd-parallax-layer" data-type="html" data-speed="1">
                     <div class="swiper-container swiper-slider swiper-slider_fullheight" data-simulate-touch="false" data-loop="true" data-autoplay="5500">
@@ -94,9 +100,17 @@ $row=$pdo->select("SELECT * FROM appArticle WHERE Tb_index=:Tb_index", ['Tb_inde
                 </section>
 
 
-                <p class="first-letter">
+                <div class="article_div my-5">
                   <?php echo $row['aTXT'];?>
-                </p>
+                </div>
+
+
+                <div>
+                    <ul class="list-inline-sm line_share">
+                      <h6>Share</h6>
+                      <li><button type="button" class="icon-sm fa-facebook icon" style="color: #3F51B5; cursor: pointer;"  onclick="window.open('https://www.facebook.com/dialog/feed?app_id=1752476714860775&display=popup&link=<?php echo urlencode($FB_URL);?>&redirect_uri=https://www.facebook.com/', 'FB分享', config='height=600,width=800');"></button></li>
+                    </ul>
+                  </div>
                  
               </section>
 
@@ -146,11 +160,51 @@ $row=$pdo->select("SELECT * FROM appArticle WHERE Tb_index=:Tb_index", ['Tb_inde
 
                 </div>
               </section>
-              
-              
-              
-             
             </div>
+
+
+
+
+
+
+            <div class="col-lg-4 section-divided__aside section-divided__aside-left">
+              <!-- Categories-->
+              <section class="section-md">
+                <h5>分類目錄</h5>
+                <ul class="list-linked">
+                  <li><a href="#">Retina Homepage</a></li>
+                  <li><a href="#">New Page Examples</a></li>
+                  <li><a href="#">Parallax Sections</a></li>
+                  <li><a href="#">Shortcode Central</a></li>
+                  <li><a href="#">Ultimate Font Collection</a></li>
+                </ul>
+              </section>
+
+              
+
+              <!-- Tags-->
+              
+              <section class="section-md">
+                <h5>標籤</h5>
+                <ul class="list-tags">
+                  <?php
+                    $label=explode(',',$row['label']);
+                    foreach ($label as $label_one) {
+                      $row_label=$pdo->select("SELECT label_name FROM appLabel WHERE Tb_index=:Tb_index", ['Tb_index'=>$label_one], 'one');
+                      echo '<li><a href="#">'.$row_label['label_name'].'</a></li>';
+                    }
+                  ?>
+                </ul>
+              </section>
+
+              
+            </div>
+
+
+
+
+
+
 
           </div>
         </div>

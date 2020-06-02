@@ -1,12 +1,34 @@
 <!-- Page Footer-->
-      <section class="pre-footer-corporate">
+      <div class="logo_div">
+
+              <!-- <ul class="brands_icon">
+                <li><a href="#"><img class="logo_n_hover" src="img/logo_l_d1.png"><img class="logo_hover" src="img/logo_l_1.png"></a></li>
+                <li><a href="#"><img class="logo_n_hover" src="img/logo_l_d2.png"><img class="logo_hover" src="img/logo_l_2.png"></a></li>
+                <li><a href="#"><img class="logo_n_hover" src="img/logo_l_d3.png"><img class="logo_hover" src="img/logo_l_3.png"></a></li>
+                <li><a href="#"><img class="logo_n_hover" src="img/logo_l_d4.png"><img class="logo_hover" src="img/logo_l_4.png"></a></li>
+              </ul> -->
+
+
+             <div class="swiper-container logo_sw">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="#"><img class="logo_n_hover" src="img/logo_l_d1.png"><img class="logo_hover" src="img/logo_l_1.png"></a></div>
+                    <div class="swiper-slide"><a href="#"><img class="logo_n_hover" src="img/logo_l_d2.png"><img class="logo_hover" src="img/logo_l_2.png"></a></div>
+                    <div class="swiper-slide"><a href="#"><img class="logo_n_hover" src="img/logo_l_d3.png"><img class="logo_hover" src="img/logo_l_3.png"></a></div>
+                    <div class="swiper-slide"><a href="#"><img class="logo_n_hover" src="img/logo_l_d4.png"><img class="logo_hover" src="img/logo_l_4.png"></a></div>
+                </div>
+            </div>
+
+
+</div>      
+
+<section class="pre-footer-corporate">
         <div class="container">
-          <div class="row justify-content-sm-center justify-content-lg-start row-30 row-md-60">
+          <div class="row justify-content-sm-center justify-content-xl-center row-30 row-md-60">
             <div class="col-sm-10 col-md-6 col-lg-10 col-xl-3">
               <h6 class="text-regular">關於</h6>
               <p><?php echo $company['description'];?></p>
             </div>
-            <div class="col-sm-10 col-md-6 col-lg-3 col-xl-2">
+            <div class="col-sm-10 col-md-6 col-lg-3 col-xl-3">
               <h6 class="text-regular">選單</h6>
               <div class="row">
                 <div class="col-md-6 col-6">
@@ -26,16 +48,9 @@
                   </ul>
                 </div>
               </div>
- 
             </div>
-            <div class="col-sm-10 col-md-6 col-lg-10 col-xl-3">
-              <ul class="brands_icon">
-                <li><img src="img/her.jpg"></li>
-                <li><img src="img/home.jpg"></li>
-                <li><img src="img/top.jpg"></li>
-                <li><img src="img/cloth.jpg"></li>
-              </ul>
-            </div>
+
+            
             
             <div class="col-sm-10 col-md-6 col-lg-4 col-xl-4">
               <h6 class="text-regular">聯絡我們</h6>
