@@ -26,7 +26,7 @@
                     </li> -->
                     <li class="rd-nav-item"><a class="rd-nav-link" href="article_list.php?mt_id=site2018110610481744">食事日常</a></li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="article_list.php?mt_id=site2020042914035766">職人嚴選</a></li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="article_list.php?mt_id=site2020042914164188">空間美學</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="space.php?mt_id=site2020042914164188">空間美學</a></li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="article_list.php?mt_id=site2020042914190418">襲園行旅</a></li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="brands_list.php">品牌頻道</a> </li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="#">嚴選好物</a></li> 

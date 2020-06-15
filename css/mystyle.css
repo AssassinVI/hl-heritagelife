@@ -3,7 +3,7 @@
 .thumbnail-classic{    max-width: 550px;}
 html, body, div, h1,h2,h3,h4,h5,p,span,a,b{font-family: Microsoft JhengHei;  }
 .swiper_a{    width: 100%; height: 100%; display: flex; align-items: center;}
-.desktop .swiper-slider_fullheight{min-height: 80vh;}
+.desktop .swiper-slider_fullheight{min-height: 50vh;}
 
 .title_div h2{font-size: 40px; letter-spacing: 3px;}
 .title_div span{letter-spacing: 1px;  color: #000;  font-weight: 500;}
@@ -82,6 +82,21 @@ html .page .group > *{ margin-bottom: 10px;}
 .d_title{ font-size: 24px;  letter-spacing: 0.1em;}
 .article_div h2 {  font-size: 20px;  letter-spacing: 0.1em;}
 .article_div h3 {  font-size: 18px;  letter-spacing: 0.1em;}
+.article_div h5{ font-size: 17px;  letter-spacing: 0.1em;  line-height: 1.8;  margin-bottom: 40px; font-weight: 200;}
+.article_div blockquote p, .article_div blockquote div, .article_div blockquote h1, .article_div blockquote h2{ font-size: 25px; margin: 105px 0 50px 0;   text-align: center;  font-weight: 500;}
+blockquote{position: relative;}
+blockquote:before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/mark.svg);
+    background-repeat: no-repeat;
+}
 
 /*-- 聯絡我們 --*/
 .list-terms-minimal *{ font-size: 15px; color: #000; letter-spacing: 0.1em;}

@@ -100,7 +100,14 @@ $FB_URL='https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
                 </section>
 
 
+
+
                 <div class="article_div my-5">
+                  <h5>
+                   <?php echo $row['SmallTitle']?>
+                  </h5>
+
+
                   <?php echo $row['aTXT'];?>
                 </div>
 
@@ -172,11 +179,10 @@ $FB_URL='https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
               <section class="section-md">
                 <h5>分類目錄</h5>
                 <ul class="list-linked">
-                  <li><a href="#">Retina Homepage</a></li>
-                  <li><a href="#">New Page Examples</a></li>
-                  <li><a href="#">Parallax Sections</a></li>
-                  <li><a href="#">Shortcode Central</a></li>
-                  <li><a href="#">Ultimate Font Collection</a></li>
+                  <li><a href="article_list.php?mt_id=site2018110610481744">食事日常</a></li>
+                  <li><a href="article_list.php?mt_id=site2020042914035766">職人嚴選</a></li>
+                  <li><a href="article_list.php?mt_id=site2020042914164188">空間美學</a></li>
+                  <li><a href="article_list.php?mt_id=site2020042914190418">襲園行旅</a></li>
                 </ul>
               </section>
 

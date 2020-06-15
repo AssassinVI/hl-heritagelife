@@ -117,7 +117,7 @@ if ($_POST) {
 	$param=  ['Tb_index'=>$Tb_index,
 			              'mt_id'=>$_POST['mt_id'],
 			             'aTitle'=>$_POST['aTitle'],
-                   'aTitle_s'=>$_POST['aTitle_s'],
+                   //'aTitle_s'=>$_POST['aTitle_s'],
 			         'SmallTitle'=>$_POST['SmallTitle'],
 			             'aPoster'=>$_POST['aPoster'],
 			          'aAbstract'=>$_POST['aAbstract'],
@@ -220,7 +220,7 @@ if ($_POST) {
     $param=[  
 		              'mt_id'=>$_POST['mt_id'],
     	           'aTitle'=>$_POST['aTitle'],
-                 'aTitle_s'=>$_POST['aTitle_s'],
+                 //'aTitle_s'=>$_POST['aTitle_s'],
     	       'SmallTitle'=>$_POST['SmallTitle'],
     	          'aPoster'=>$_POST['aPoster'],
 		          'aAbstract'=>$_POST['aAbstract'],
@@ -279,12 +279,12 @@ if ($_GET) {
 							</div>
 						</div>
 
-						<div class="form-group">
+			<!-- <div class="form-group">
               <label class="col-md-2 control-label" for="aTitle_s">次標題名稱</label>
               <div class="col-md-10">
-                <textarea class="form-control" id="aTitle_s" name="aTitle_s"><?php echo $row['aTitle_s'];?></textarea>
+                <textarea class="form-control" id="aTitle_s" name="aTitle_s"><?php //echo $row['aTitle_s'];?></textarea>
               </div>
-            </div>
+            </div> -->
 
 						<div  class="form-group">
 							<label class="col-md-2 control-label" for="SmallTitle">前言</label>
@@ -306,11 +306,11 @@ if ($_GET) {
 								<input type="datetime-local" class="form-control" id="StartDate" name="StartDate" value="<?php echo $StartDate;?>">
 							</div>
 
-							<label class="col-md-2 control-label" for="HotArt">首頁文章</label>
+							<!-- <label class="col-md-2 control-label" for="HotArt">首頁文章</label>
 							<div class="col-md-4">
-								<input style="width: 20px; height: 20px;" id="HotArt" name="HotArt" type="checkbox" value="1" <?php echo $check=$row['HotArt']==1 ? 'checked' : ''; ?>  /> <br>
+								<input style="width: 20px; height: 20px;" id="HotArt" name="HotArt" type="checkbox" value="1" <?php //echo $check=$row['HotArt']==1 ? 'checked' : ''; ?>  /> <br>
 								<span class="text-danger">最多12篇</span>
-							</div>
+							</div> -->
 						</div>
 
 
@@ -363,7 +363,7 @@ if ($_GET) {
 							<div class="col-md-10">
 								<?php
                                   $pdo=pdo_conn();
-                                  $sql=$pdo->prepare("SELECT * FROM appLabel WHERE mt_id=:mt_id ORDER BY OrderBy DESC, Tb_index DESC");
+                                  $sql=$pdo->prepare("SELECT * FROM appLabel WHERE mt_id=:mt_id AND OnLineOrNot=1 ORDER BY OrderBy DESC, Tb_index DESC");
                                   $sql->execute(['mt_id'=>'site2018090510193983']);
                                   while ($row_label=$sql->fetch(PDO::FETCH_ASSOC)) {
                                     if (!empty($label) && in_array($row_label['Tb_index'], $label)) {

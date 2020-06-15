@@ -44,7 +44,6 @@
                     <li><a href="brands_list.php">品牌頻道</a></li>
                     <li><a href="#">嚴選好物</a></li>
                     <li><a href="contacts.php">聯絡我們</a></li>
-                    <li><a href="login.php">登入</a></li>
                   </ul>
                 </div>
               </div>
